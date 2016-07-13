@@ -3,7 +3,7 @@
   "signatureVersion": 1,
   "xdkVersion": "3400",
   "usesAppDesigner": "false",
-  "projectGuid": "7c166f81-8ba9-4305-9531-0b5f3e1bf062",
+  "projectGuid": "74ca50d3-c47b-40a2-a932-238b085012fa",
   "projectTypeName": "com.intel.xdk.projecttype.webapp",
   "src": "webapp/template-blank/sample.zip"
 }

@@ -15,7 +15,11 @@
         @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }  @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
         @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }           @viewport { user-zoom: fixed ; min-zoom: 100% ; }
     </style>
-
+    
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/main.js"></script>
     <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
     <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
     <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
@@ -23,8 +27,64 @@
 </head>
 
 <body>
+<div data-role="page" id="pageone">
+  <div data-role="main" class="ui-content">
+    <p>Bienvenido a la App Copia de Instragram.</p>
+    <a href="#pagetwo" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-left">Go to Page Two</a>
+  </div>
+</div>
 
-    <p>Hello, Intel XDK!</p>
+<!-- Segunda Pagina -->
+<div data-role="page" id="pagetwo">
+  <div data-role="main" class="ui-content">
+    <form class="ui-filterable">
+      <input id="myFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-autodividers="true" data-inset="true"  data-filter="true" data-input="#myFilter">
+    <li><a href="#">Adele</a></li>
+    <li><a href="#">Agnes</a></li>
+    <li><a href="#">Albert</a></li>
+    <li><a href="#">Billy</a></li>
+    <li><a href="#">Bob</a></li>
+    <li><a href="#">Calvin</a></li>
+    <li><a href="#">Cameron</a></li>
+    <li><a href="#">Chloe</a></li>
+    <li><a href="#">Christina</a></li>
+    <li><a href="#">Diana</a></li>
+    <li><a href="#">Gabriel</a></li>
+    <li><a href="#">Glen</a></li>
+    <li><a href="#">Ralph</a></li>
+    <li><a href="#">Valarie</a></li>
+    </ul>
+    <a href="#pageone" data-transition="slide" class="ui-btn ui-icon-arrow-r ui-btn-icon-left">Go to Page One</a>
+  </div>    
+</div>
+    
+<!-- Dialog -->    
+<div data-role="page" data-dialog="true" id="about">
+  <div data-role="main" class="ui-content">
+    <p>Esta APP es con fines educativos, todos los derechos copiados.</p>  
+    <a href="#pageone" data-transition="turn" class="ui-btn ui-icon-back ui-btn-icon-top">Volver</a>
+  </div>
+</div> 
+<div data-role="panel" id="myPanel" data-display="push" data-theme="b">
+  <div style="text-align: center;"><img src="img/emi-foto-circulo.png"></div>    
+    <a href="#pageone" class="ui-btn ui-icon-home ui-btn-icon-left">Inicio</a><a href="#pagetwo" class="ui-btn ui-icon-home ui-btn-icon-left">Pagina 2</a>
+</div>   
+<!-- Footer -->
+      <div data-role="footer" data-position="fixed" data-theme="a">
+    <a href="#about" data-transition="pop">Desarrollado por mí</a>
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-alert ui-btn-icon-left ui-btn-icon-notext">Show Popup</a>
+  <div data-role="popup" id="myPopup">
+  <p>Hola!</p>
+</div> 
+    </div>
 
+<!-- Header --> 
+  <div data-role="header" data-position="fixed" data-theme="a">
+    <a href="#myPanel" class="ui-btn ui-icon-bars ui-btn-icon-left ui-btn-icon-notext ui-corner-all ui-shadow">Home</a>  
+    <h1>CopiaGram</h1>
+  </div>
+    
 </body>
 </html>
